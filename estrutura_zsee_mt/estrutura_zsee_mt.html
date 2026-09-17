@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estruturação do ZSEE-MT</title>
+<style>
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+    margin:0;
+    background:#f2f2f2;
+    color:#111827;
+    font-family:Arial,Helvetica,sans-serif;
+    border-top:3px solid #062b5c;
+}
+.page {
+    width:min(1120px,calc(100% - 32px));
+    margin:auto;
+    padding:0 0 48px;
+}
+h1 {
+    margin:4px 0 20px;
+    color:#062b5c;
+    font-size:clamp(30px,4vw,40px);
+    line-height:1.15;
+}
+.intro {
+    font-size:19px;
+    line-height:1.42;
+    text-align:justify;
+    margin:0 0 20px;
+}
+.lead { margin-top:24px; margin-bottom:12px; }
+.accordion-section { margin:4px 0; }
+.accordion-header {
+    width:100%;
+    border:0;
+    border-radius:28px;
+    padding:13px 17px;
+    background:#062b5c;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:20px;
+    font-weight:700;
+    text-align:left;
+    cursor:pointer;
+}
+.accordion-header:hover { background:#0a396f; }
+.accordion-header:focus-visible {
+    outline:3px solid #8aa9c9;
+    outline-offset:2px;
+}
+.chevron { font-size:24px; transition:transform .2s ease; }
+.accordion-header[aria-expanded="true"] .chevron { transform:rotate(180deg); }
+.accordion-content {
+    display:none;
+    padding:18px 10px 12px;
+}
+.accordion-content.open { display:block; }
+.entity-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+}
+.entity-card {
+    min-height:104px;
+    background:#fff;
+    border:1px solid #c9cdd2;
+    display:flex;
+    align-items:center;
+    padding:10px 16px;
+    gap:16px;
+    box-shadow:0 1px 2px rgba(0,0,0,.04);
+}
+.logo-wrap {
+    width:100px;
+    min-width:100px;
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+.logo-wrap img {
+    max-width:92px;
+    max-height:78px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
+.no-logo {
+    width:76px;
+    height:76px;
+    border:1px solid #d8dce1;
+    border-radius:50%;
+}
+.entity-info { min-width:0; }
+.entity-info h3 {
+    margin:0 0 4px;
+    color:#111;
+    font-size:19px;
+    line-height:1.15;
+    font-weight:700;
+}
+.entity-info p {
+    margin:0;
+    color:#111;
+    font-size:17px;
+    line-height:1.28;
+}
+@media(max-width:760px) {
+    .page { width:min(100% - 20px,1120px); }
+    .intro { font-size:17px; text-align:left; }
+    .accordion-header { font-size:18px; padding:12px 15px; }
+    .entity-grid { grid-template-columns:1fr; }
+    .entity-card { min-height:96px; }
+}
+@media(max-width:430px) {
+    h1 { font-size:29px; }
+    .entity-card { padding:9px 11px; gap:10px; }
+    .logo-wrap { width:76px; min-width:76px; height:70px; }
+    .logo-wrap img { max-width:70px; max-height:66px; }
+    .entity-info h3 { font-size:17px; }
+    .entity-info p { font-size:15px; }
+}
+</style>
+</head>
+<body>
+<main class="page">
+<h1>Estruturação do ZSEE-MT</h1>
+
+<p class="intro">
+O estudo do Zoneamento Socioeconômico Ecológico de Mato Grosso (ZSEE-MT)
+foi desenvolvido pela Universidade Federal de Viçosa (UFV), sob a coordenação
+da Superintendência de Indicadores Socioeconômicos e Ordenamento Territorial
+(SISOT) da SEPLAG-MT.
+</p>
+
+<p class="intro">
+O processo contou com a participação de representantes do poder público,
+através da Comissão Técnica de Conformidade (CTC), e da sociedade civil,
+representada pela Comissão Estadual de Zoneamento Socioeconômico Ecológico
+(CEZSEE-MT), que acompanhou o desenvolvimento dos trabalhos por intermédio
+de um Grupo de Trabalho específico.
+</p>
+
+<p class="intro lead">A seguir, apresenta-se a composição dos grupos envolvidos:</p>
+
+
+    <section class="accordion-section">
+        <button class="accordion-header" type="button" aria-expanded="true" aria-controls="ctc">
+            <span>Comissão Técnica de Conformidade (CTC)</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+        </button>
+        <div id="ctc" class="accordion-content open">
+            <div class="entity-grid">
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEPLAG" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEPLAG</h3>
+                <p>Secretaria de Estado de Planejamento e Gestão</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEMA" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEMA</h3>
+                <p>Secretaria de Estado do Meio Ambiente</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEDEC" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEDEC</h3>
+                <p>Secretaria de Estado de Desenvolvimento Econômico</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de INTERMAT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>INTERMAT</h3>
+                <p>Instituto de Terras de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/unemat.png" alt="Logotipo de UNEMAT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>UNEMAT</h3>
+                <p>Universidade Estadual de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de Escola de Governo do Estado de Mato Grosso" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>Escola de Governo do Estado de Mato Grosso</h3>
+                
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEAF" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEAF</h3>
+                <p>Secretaria de Estado de Agricultura Familiar</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEFAZ" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEFAZ</h3>
+                <p>Secretaria de Estado de Fazenda</p>
+            </div>
+        </article></div>
+        </div>
+    </section>
+
+    <section class="accordion-section">
+        <button class="accordion-header" type="button" aria-expanded="false" aria-controls="cezsee">
+            <span>Comissão Estadual do ZSEE-MT (CEZSEE-MT)</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+        </button>
+        <div id="cezsee" class="accordion-content ">
+            <div class="entity-grid">
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEPLAG" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEPLAG</h3>
+                <p>Secretaria de Estado de Planejamento e Gestão</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEMA" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEMA</h3>
+                <p>Secretaria de Estado do Meio Ambiente</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEDEC" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEDEC</h3>
+                <p>Secretaria de Estado de Desenvolvimento Econômico</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de INTERMAT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>INTERMAT</h3>
+                <p>Instituto de Terras de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SES" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SES</h3>
+                <p>Secretaria de Estado de Saúde</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SESP" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SESP</h3>
+                <p>Secretaria de Estado de Segurança</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/ufmt.jpg" alt="Logotipo de UFMT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>UFMT</h3>
+                <p>Universidade Federal de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/fepoimt.jpg" alt="Logotipo de FEPOIMT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>FEPOIMT</h3>
+                <p>Federação dos Povos e Organizações Indígenas de MT</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><div class="no-logo" aria-hidden="true"></div></div>
+            <div class="entity-info">
+                <h3>Associação Indígena Irikixi Pitukwa</h3>
+                
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><div class="no-logo" aria-hidden="true"></div></div>
+            <div class="entity-info">
+                <h3>Comunidade Indígena Omicrikanas</h3>
+                
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/isa.png" alt="Logotipo de ISA" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>ISA</h3>
+                <p>Instituto Socioambiental</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/icv.jpg" alt="Logotipo de ICV" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>ICV</h3>
+                <p>Instituto Centro de Vida</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/opan.jpg" alt="Logotipo de OPAN" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>OPAN</h3>
+                <p>Operação Amazônia Nativa</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/cipem.png" alt="Logotipo de CIPEM" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>CIPEM</h3>
+                <p>Centro das Indústrias Produtoras e Exportadoras de Madeira de MT</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/imea.png" alt="Logotipo de IMEA" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>IMEA</h3>
+                <p>Instituto Mato-Grossense de Economia Agropecuária</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/funai.png" alt="Logotipo de FUNAI" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>FUNAI</h3>
+                <p>Fundação Nacional dos Povos Indígenas</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/unemat.png" alt="Logotipo de UNEMAT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>UNEMAT</h3>
+                <p>Universidade Estadual de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SINFRA" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SINFRA</h3>
+                <p>Secretaria de Estado de Infraestrutura</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEAF" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEAF</h3>
+                <p>Secretaria de Estado de Agricultura Familiar</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SETASC" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SETASC</h3>
+                <p>Secretaria de Estado de Assistência Social e Cidadania</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEDUC" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEDUC</h3>
+                <p>Secretaria de Estado de Educação</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de Casa Civil" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>Casa Civil</h3>
+                
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/fiemt.png" alt="Logotipo de FIEMT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>FIEMT</h3>
+                <p>Federação das Indústrias no Estado de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/fetagri.jpg" alt="Logotipo de FETAGRI" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>FETAGRI</h3>
+                <p>Federação dos Trabalhadores na Agricultura de MT</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/fe-e-vida.jpeg" alt="Logotipo de Associação Fé e Vida" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>Associação Fé e Vida</h3>
+                <p>Representante das Comunidades</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/xaraies.jpg" alt="Logotipo de ASSOCIAÇÃO XARAIÉS" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>ASSOCIAÇÃO XARAIÉS</h3>
+                
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/famato.png" alt="Logotipo de FAMATO" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>FAMATO</h3>
+                <p>Federação de Agricultura e Pecuária de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/amm.jpg" alt="Logotipo de AMM" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>AMM</h3>
+                <p>Associação Mato-grossense dos Municípios</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/cta.jpg" alt="Logotipo de CTA" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>CTA</h3>
+                <p>Centro de Tecnologia Alternativa</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/instituto-gaia.webp" alt="Logotipo de INSTITUTO GAIA" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>INSTITUTO GAIA</h3>
+                
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/icmbio.png" alt="Logotipo de ICMBIO" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>ICMBIO</h3>
+                <p>Instituto Chico Mendes</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/incra.jpg" alt="Logotipo de INCRA" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>INCRA</h3>
+                <p>Instituto Nacional de Colonização e Reforma Agrária</p>
+            </div>
+        </article></div>
+        </div>
+    </section>
+
+    <section class="accordion-section">
+        <button class="accordion-header" type="button" aria-expanded="false" aria-controls="gt">
+            <span>Grupo de Trabalho (GT) da CEZSEE-MT</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+        </button>
+        <div id="gt" class="accordion-content ">
+            <div class="entity-grid">
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEPLAG" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEPLAG</h3>
+                <p>Secretaria de Estado de Planejamento e Gestão</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/logo-estado.jpg" alt="Logotipo de SEAF" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>SEAF</h3>
+                <p>Secretaria de Estado de Agricultura Familiar</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/ufmt.jpg" alt="Logotipo de UFMT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>UFMT</h3>
+                <p>Universidade Federal de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/fepoimt.jpg" alt="Logotipo de FEPOIMT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>FEPOIMT</h3>
+                <p>Federação dos Povos e Organizações Indígenas de MT</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/isa.png" alt="Logotipo de ISA" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>ISA</h3>
+                <p>Instituto Socioambiental</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/icv.jpg" alt="Logotipo de ICV" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>ICV</h3>
+                <p>Instituto Centro de Vida</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/unemat.png" alt="Logotipo de UNEMAT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>UNEMAT</h3>
+                <p>Universidade Estadual de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/fiemt.png" alt="Logotipo de FIEMT" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>FIEMT</h3>
+                <p>Federação das Indústrias no Estado de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/fe-e-vida.jpeg" alt="Logotipo de Associação Fé e Vida" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>Associação Fé e Vida</h3>
+                <p>Representante das Comunidades</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/famato.png" alt="Logotipo de FAMATO" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>FAMATO</h3>
+                <p>Federação de Agricultura e Pecuária de Mato Grosso</p>
+            </div>
+        </article>
+
+        <article class="entity-card">
+            <div class="logo-wrap"><img src="imagens/amm.jpg" alt="Logotipo de AMM" loading="lazy"></div>
+            <div class="entity-info">
+                <h3>AMM</h3>
+                <p>Associação Mato-grossense dos Municípios</p>
+            </div>
+        </article></div>
+        </div>
+    </section>
+
+</main>
+<script>
+document.querySelectorAll('.accordion-header').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const content=document.getElementById(button.getAttribute('aria-controls'));
+        const expanded=button.getAttribute('aria-expanded')==='true';
+        button.setAttribute('aria-expanded',String(!expanded));
+        content.classList.toggle('open',!expanded);
+    });
+});
+</script>
+</body>
+</html>

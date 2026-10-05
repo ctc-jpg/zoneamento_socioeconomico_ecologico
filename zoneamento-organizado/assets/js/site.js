@@ -1,6 +1,6 @@
 // Preencha os quatro endereços quando as páginas de destino estiverem definidas.
 const links = {
-  elaboracao: 'paginas/elaboracao-zsee/',
+  elaboracao: 'https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?draft=true&id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&page=Elabora%C3%A7%C3%A3o-do-ZSEE-html',
   metodologia: 'https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?draft=true&id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&page=Metodologia',
   cadernos: 'https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?draft=true&id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&page=Cadernos-do-ZSEE',
   mapas: ''

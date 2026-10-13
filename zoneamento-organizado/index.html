@@ -1,5 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+      
+<style>
+  /* Ano centralizado sobre cada cartão */
+  .timeline .year {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Bolinha verde centralizada sobre cada cartão */
+  .timeline .event::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Texto centralizado horizontal e verticalmente */
+  .timeline .event-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline .event-card p {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Logo da SEPLAG centralizada no celular */
+  @media (max-width: 760px) {
+    .footer .footer-logo {
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ZSEE-MT — Zoneamento Socioeconômico-Ecológico de Mato Grosso</title><meta name="description" content="Conheça o Zoneamento Socioeconômico-Ecológico de Mato Grosso, sua trajetória e as instituições participantes."><link rel="icon" href="assets/imagens/logo.png"><link rel="stylesheet" href="assets/css/site.css"></head>
 <body>
 <a class="skip" href="#conteudo">Ir para o conteúdo</a>

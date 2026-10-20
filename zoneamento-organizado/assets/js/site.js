@@ -4,8 +4,8 @@ const siteBase =
 
 // Páginas que serão abertas dentro do mesmo Embutido.
 const links = {
-  elaboracao: siteBase + 'paginas/elaboracao/',
-  metodologia: siteBase + 'paginas/metodologia/',
+  elaboracao: siteBase + 'paginas/elaboracao/elaboracao-zsee.html',
+  metodologia: siteBase + 'paginas/metodologia/metodologia-em-elaboracao.html',
   cadernos: siteBase + 'paginas/cadernos/cadernos-zoneamento.html',
   mapas: ''
 };

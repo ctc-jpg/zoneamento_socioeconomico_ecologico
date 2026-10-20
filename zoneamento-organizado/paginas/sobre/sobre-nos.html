@@ -110,4 +110,70 @@ matchMedia('(min-width:761px)').addEventListener('change',closeMenu);
 const video=document.querySelector('.hero-video');const screen=matchMedia('(max-width:760px)');const reduced=matchMedia('(prefers-reduced-motion:reduce)');let active='';
 function updateVideo(){if(reduced.matches){video.pause();return;}const src=screen.matches?'https://ctc-jpg.github.io/zoneamento_socioeconomico_ecologico/zoneamento-organizado/assets/videos/capa-celular.mp4':'https://ctc-jpg.github.io/zoneamento_socioeconomico_ecologico/zoneamento-organizado/assets/videos/capa.mp4';if(active!==src){video.src=src;active=src;video.load();}video.muted=true;video.defaultMuted=true;video.play().catch(()=>{});}
 screen.addEventListener('change',updateVideo);reduced.addEventListener('change',updateVideo);updateVideo();
+<script>
+(() => {
+  const base =
+    'https://ctc-jpg.github.io/zoneamento_socioeconomico_ecologico/zoneamento-organizado/';
+
+  const paginas = {
+    'elaboracao-do-zsee':
+      'paginas/elaboracao/elaboracao-zsee.html',
+
+    'elaboracao-do-zsee-html':
+      'paginas/elaboracao/elaboracao-zsee.html',
+
+    'metodologia':
+      'paginas/metodologia/metodologia-em-elaboracao.html',
+
+    'cadernos-do-zsee':
+      'paginas/cadernos/cadernos-zoneamento.html',
+
+    'sobre':
+      'paginas/sobre/sobre-nos.html',
+
+    'sobre-nos':
+      'paginas/sobre/sobre-nos.html',
+
+    'oficina-de-diretrizes':
+      'paginas/oficina-diretrizes/',
+
+    'seminario-de-diretrizes':
+      'paginas/seminario-diretrizes/'
+  };
+
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+
+    if (!href || href.startsWith('#')) return;
+
+    const url = new URL(href, document.baseURI);
+
+    if (!['http:', 'https:'].includes(url.protocol)) return;
+
+    if (url.hostname === 'geodados.mt.gov.br') {
+      const pagina = (url.searchParams.get('page') || '')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/-+$/, '');
+
+      const caminho = pagina ? paginas[pagina] : '';
+
+      // Mantém destinos ainda não mapeados sem alteração.
+      if (pagina && caminho === undefined) return;
+
+      link.href = base + caminho;
+      link.target = '_self';
+      link.removeAttribute('rel');
+
+    } else if (url.href.startsWith(base)) {
+      link.target = '_self';
+      link.removeAttribute('rel');
+
+    } else {
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    }
+  });
+})();
 </script></body></html>

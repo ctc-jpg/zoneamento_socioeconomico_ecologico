@@ -14,7 +14,9 @@ document.addEventListener('click',e=>{if(!e.target.closest('.header'))closeMenu(
 navigation.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu();});
 matchMedia('(min-width:761px)').addEventListener('change',closeMenu);
 const dialog=document.querySelector('#pending-link');
-document.querySelectorAll('[data-destination]').forEach(button=>{const address=links[button.dataset.destination];if(address){const anchor=document.createElement('a');anchor.className=button.className;anchor.innerHTML=button.innerHTML;anchor.href=address;anchor.target='_blank';anchor.rel='noopener noreferrer';button.replaceWith(anchor);}else button.addEventListener('click',()=>{document.querySelector('#pending-title').textContent=button.textContent.trim();dialog.showModal();});});
+document.querySelectorAll('[data-destination]').forEach(button=>{const address=links[button.dataset.destination];if(address){const anchor=document.createElement('a');anchor.className=button.className;anchor.innerHTML=button.innerHTML;anchor.href=address;anchor.target = new URL(address, document.baseURI).hostname === 'geodados.mt.gov.br'
+  ? '_top'
+  : '_blank';anchor.rel='noopener noreferrer';button.replaceWith(anchor);}else button.addEventListener('click',()=>{document.querySelector('#pending-title').textContent=button.textContent.trim();dialog.showModal();});});
 document.querySelector('.dialog-close').addEventListener('click',()=>dialog.close());
 const timeline=document.querySelector('.timeline');
 const events=[...timeline.querySelectorAll('.event')];

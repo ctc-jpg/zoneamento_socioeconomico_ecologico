@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Publicações técnicas do Zoneamento de Mato Grosso: cadernos de 2018 e nova versão em elaboração."
+    content="Consulte os Cadernos do Zoneamento de Mato Grosso de 2018 e acompanhe a elaboração das novas publicações."
   >
 
   <style>
@@ -16,7 +16,6 @@
       --navy: #062b5c;
       --green: #168a78;
       --line: #dce7ee;
-      --surface: #f4f7fa;
       font-family: Arial, Helvetica, sans-serif;
       color: #000;
       background: #fff;
@@ -38,17 +37,11 @@
 
     a {
       color: var(--navy);
-      text-underline-offset: 3px;
     }
 
     button {
       font: inherit;
       cursor: pointer;
-    }
-
-    a,
-    button {
-      -webkit-tap-highlight-color: transparent;
     }
 
     a:focus-visible,
@@ -116,7 +109,6 @@
 
     .nav a {
       padding: 16px 0;
-      color: var(--navy);
       font-size: 13px;
       font-weight: 700;
       text-decoration: none;
@@ -142,12 +134,12 @@
       margin: auto;
     }
 
-    /* Vídeo e logo central. */
+    /* Capa com vídeo. */
     .hero {
       position: relative;
       aspect-ratio: 1890 / 600;
       isolation: isolate;
-      background-color: #c9e6e8;
+      background: #c9e6e8;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -156,23 +148,11 @@
     .hero-video {
       position: absolute;
       inset: 0;
-      z-index: -2;
+      z-index: -1;
       width: 100%;
       height: 100%;
       object-fit: contain;
       object-position: center;
-    }
-
-    .hero::after {
-      position: absolute;
-      inset: 0;
-      z-index: -1;
-      content: "";
-      background: linear-gradient(
-        0deg,
-        rgba(4, 32, 64, 0.12),
-        transparent 60%
-      );
     }
 
     .hero-inner {
@@ -196,7 +176,7 @@
       width: 100%;
     }
 
-    /* Localização da página. */
+    /* Caminho de navegação. */
     .breadcrumb {
       padding: 16px 0;
       background: var(--navy);
@@ -218,14 +198,14 @@
       text-decoration: underline;
     }
 
-    .breadcrumb .separator {
+    .separator {
       margin-inline: 10px;
     }
 
-    /* Conteúdo e cartões. */
+    /* Conteúdo. */
     .events-main {
       padding: 50px 0 64px;
-      background: var(--surface);
+      background: #f4f7fa;
     }
 
     .events-intro {
@@ -247,7 +227,6 @@
       color: var(--navy);
       font-size: clamp(27px, 3vw, 38px);
       line-height: 1.2;
-      letter-spacing: -0.025em;
     }
 
     h1::after {
@@ -262,7 +241,6 @@
 
     .events-intro > p:not(.eyebrow) {
       margin: 0 0 12px;
-      color: #000;
       font-size: 17px;
       line-height: 1.75;
     }
@@ -313,7 +291,6 @@
 
     .event-tile > p {
       margin: 0 0 28px;
-      color: #000;
       font-size: 16px;
       line-height: 1.75;
       overflow-wrap: anywhere;
@@ -358,24 +335,18 @@
       text-align: center;
     }
 
-    /* Rodapé centralizado e sem logo da SEPLAG. */
+    /* Rodapé: somente texto, sem imagem. */
     .footer {
-      padding: 28px 0;
-      background: var(--navy);
+      padding: 28px 20px;
+      background: #062b5c;
       color: #fff;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       text-align: center;
     }
 
     .footer p {
       width: 100%;
-      margin: 0;
+      max-width: 1200px;
+      margin: 0 auto;
       color: #fff;
       font-size: 14px;
       line-height: 1.7;
@@ -387,7 +358,6 @@
       color: #fff;
     }
 
-    /* Tablets. */
     @media (max-width: 1000px) {
       .brand {
         width: 280px;
@@ -404,13 +374,8 @@
       .event-tile {
         padding: 24px;
       }
-
-      .event-tile h2 {
-        font-size: 21px;
-      }
     }
 
-    /* Celulares. */
     @media (max-width: 760px) {
       .container {
         width: calc(100% - 36px);
@@ -557,10 +522,7 @@
     </div>
   </header>
 
-  <section
-    class="hero"
-    aria-label="Zoneamento Socioeconômico-Ecológico de Mato Grosso"
-  >
+  <section class="hero" aria-label="ZSEE-MT">
     <video
       class="hero-video"
       poster="https://ctc-jpg.github.io/zoneamento_socioeconomico_ecologico/zoneamento-organizado/assets/imagens/capa.jpg"
@@ -675,22 +637,21 @@
     </div>
   </main>
 
+  <!-- RODAPÉ SEM IMAGEM: SOMENTE TEXTO CENTRALIZADO. -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <p>
-        <strong>
-          SEPLAG - Secretaria de Estado de Planejamento e Gestão -
-          Todos os direitos reservados.
-        </strong>
-        <br>
-        Rua C, Bloco III, CPA • Cuiabá-MT • 78049-005 •
-        Tel: (65) 3613-3271
-      </p>
-    </div>
+    <p>
+      <strong>
+        SEPLAG - Secretaria de Estado de Planejamento e Gestão -
+        Todos os direitos reservados.
+      </strong>
+      <br>
+      Rua C, Bloco III, CPA • Cuiabá-MT • 78049-005 •
+      Tel: (65) 3613-3271
+    </p>
   </footer>
 
   <script>
-    /* Menu responsivo. */
+    /* Menu do celular. */
     const menuButton = document.querySelector('.menu-toggle');
     const navigation = document.querySelector('.nav');
 
@@ -738,7 +699,7 @@
       closeMenu
     );
 
-    /* Vídeo de computador e celular. */
+    /* Vídeos de computador e celular. */
     const assetsBase =
       'https://ctc-jpg.github.io/' +
       'zoneamento_socioeconomico_ecologico/' +
@@ -787,7 +748,7 @@
       }
 
       video.play().catch(() => {
-        /* Exibe a imagem de capa se o autoplay for bloqueado. */
+        /* Mantém a imagem de capa se o autoplay for bloqueado. */
       });
     }
 

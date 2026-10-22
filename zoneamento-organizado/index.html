@@ -1,588 +1,1184 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-      
-<style>
-  /* Ano centralizado sobre cada cartão */
-  .timeline .year {
-    width: 100%;
-    text-align: center;
-  }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  /* Bolinha verde centralizada sobre cada cartão */
-  .timeline .event::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  <title>ZSEE-MT — Zoneamento Socioeconômico-Ecológico de Mato Grosso</title>
 
-  /* Texto centralizado horizontal e verticalmente */
-  .timeline .event-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+  <meta
+    name="description"
+    content="Conheça o Zoneamento Socioeconômico-Ecológico de Mato Grosso, sua trajetória e as instituições participantes."
+  >
 
-  .timeline .event-card p {
-    width: 100%;
-    text-align: center;
-  }
+  <link rel="icon" href="assets/imagens/logo.png">
+  <link rel="stylesheet" href="assets/css/site.css">
 
-  /* Logo da SEPLAG centralizada no celular */
-  @media (max-width: 760px) {
-    .footer .footer-logo {
-      align-self: center;
-      margin-left: auto;
-      margin-right: auto;
+  <style>
+    /* Centralização dos anos, círculos e textos da cronologia. */
+    .timeline .year {
+      width: 100%;
+      text-align: center;
     }
-  }
-</style>
 
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>ZSEE-MT — Zoneamento Socioeconômico-Ecológico de Mato Grosso</title><meta name="description" content="Conheça o Zoneamento Socioeconômico-Ecológico de Mato Grosso, sua trajetória e as instituições participantes."><link rel="icon" href="assets/imagens/logo.png"><link rel="stylesheet" href="assets/css/site.css"></head>
+    .timeline .event::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .timeline .event-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .timeline .event-card p {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Perguntas frequentes. */
+    .faq {
+      background: #f3f6f8;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .faq-list details {
+      background: #fff;
+      border: 1px solid #dce4eb;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .faq-list summary {
+      display: list-item;
+      padding: 20px 24px;
+      cursor: pointer;
+      color: #062b5c;
+      font-weight: 700;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    .faq-list summary::marker {
+      color: #168a78;
+    }
+
+    .faq-list summary:focus-visible {
+      outline: 3px solid #168a78;
+      outline-offset: -3px;
+    }
+
+    .faq-list details[open] summary {
+      border-bottom: 1px solid #e5ebef;
+      margin-bottom: 16px;
+    }
+
+    .faq-answer {
+      padding: 0 24px 20px;
+      color: #000;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      color: #000;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 760px) {
+      .faq-list summary {
+        padding: 18px;
+      }
+
+      .faq-answer {
+        padding: 0 18px 18px;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<a class="skip" href="#conteudo">Ir para o conteúdo</a>
-<header class="header"><div class="container header-inner"><a class="brand" href="https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&amp;draft=true" target="_blank" rel="noopener noreferrer" aria-label="ZSEE-MT — início"><img src="assets/imagens/logo.png" width="636" height="103" alt="ZSEE-MT — Zoneamento Socioeconômico-Ecológico de Mato Grosso"></a><button class="menu-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu"><svg viewBox="0 0 24 24" aria-hidden="true" class=""><path d="M3 6h18M3 12h18M3 18h18"/></svg></button><nav class="nav" id="main-nav" aria-label="Menu principal"><a href="https://www.seplag.mt.gov.br/" target="_blank" rel="noopener noreferrer">SEPLAG</a><a href="https://iframe.leisestaduais.com.br/mt?origin=instituicao" target="_blank" rel="noopener noreferrer">LEGISLAÇÃO</a><a href="https://www.seplag.mt.gov.br/atendimento" target="_blank" rel="noopener noreferrer">CONTATOS</a><a href="https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&amp;page=Sobre&amp;views=Exibir-7" target="_blank" rel="noopener noreferrer">SOBRE NÓS</a></nav></div></header>
-<main id="conteudo">
-<section class="hero" id="inicio" aria-label="Zoneamento Socioeconômico-Ecológico de Mato Grosso"><video class="hero-video" data-mobile-src="assets/videos/capa-celular.mp4" data-mobile-poster="assets/imagens/capa-celular.jpg" data-src="assets/videos/capa.mp4" poster="assets/imagens/capa.jpg" muted loop playsinline preload="none" aria-hidden="true" disablepictureinpicture></video><div class="container hero-inner"><div class="hero-logo"><img src="assets/imagens/logo.png" width="636" height="103" alt="ZSEE-MT — Zoneamento Socioeconômico-Ecológico de Mato Grosso"></div></div></section>
-<nav class="access-band" aria-label="Acessos ao zoneamento"><div class="container access-grid"><button type="button" class="access-card" data-destination="elaboracao"><svg viewBox="0 0 24 24" aria-hidden="true" class=""><rect x="9" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><path d="M12 8v4M5 16v-4h14v4"/></svg><span>Elaboração do ZSEE</span><svg viewBox="0 0 24 24" aria-hidden="true" class="arrow"><path d="m9 5 7 7-7 7"/></svg></button><button type="button" class="access-card" data-destination="metodologia"><svg viewBox="0 0 24 24" aria-hidden="true" class=""><rect x="3" y="2" width="12" height="18" rx="2"/><path d="M6 6h6M6 10h3"/><circle cx="15" cy="15" r="5"/><path d="m19 19 3 3"/></svg><span>Metodologia</span><svg viewBox="0 0 24 24" aria-hidden="true" class="arrow"><path d="m9 5 7 7-7 7"/></svg></button><button type="button" class="access-card" data-destination="cadernos"><svg viewBox="0 0 24 24" aria-hidden="true" class=""><path d="M12 5C8 2 4 2 2 3v17c3-1 7-1 10 2 3-3 7-3 10-2V3c-2-1-6-1-10 2Zm0 0v17"/></svg><span>Cadernos do ZSEE</span><svg viewBox="0 0 24 24" aria-hidden="true" class="arrow"><path d="m9 5 7 7-7 7"/></svg></button><button type="button" class="access-card" data-destination="mapas"><svg viewBox="0 0 24 24" aria-hidden="true" class=""><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Mapas Dinâmicos</span><svg viewBox="0 0 24 24" aria-hidden="true" class="arrow"><path d="m9 5 7 7-7 7"/></svg></button></div></nav>
-<section class="section" id="apresentacao"><div class="container presentation-grid"><div class="prose"><p class="eyebrow">Território e sustentabilidade</p><h1>Apresentação</h1>
-<p>O Zoneamento Socioeconômico-Ecológico de <a href="https://intergeo.intermat.mt.gov.br/portal/apps/storymaps/stories/40b98299f78f4cb0a5e216b1f33e4337" target="_blank" rel="noopener noreferrer">Mato Grosso</a> (ZSEE-MT) constitui importante instrumento para orientar o uso do território e promover um desenvolvimento mais equilibrado, sustentável e baseado em critérios técnicos.</p>
-<p>De caráter multitemático e transversal, integra informações ambientais, sociais, econômicas e territoriais, proporcionando uma visão sistêmica do Estado e oferecendo diretrizes para subsidiar as decisões do poder público e dos agentes privados.</p>
-<p>O ZSEE-MT é, portanto, um instrumento estratégico de planejamento e ordenamento territorial, voltado à promoção do desenvolvimento sustentável. Fundamentado no <a href="https://www.planalto.gov.br/ccivil_03/decreto/2002/d4297.htm" target="_blank" rel="noopener noreferrer">Decreto Federal nº 4.297, de 10 de julho de 2002</a>, e alinhado aos princípios da Política Nacional do Meio Ambiente (PNMA), instituída pela <a href="https://www.planalto.gov.br/ccivil_03/leis/l6938.htm" target="_blank" rel="noopener noreferrer">Lei nº 6.938/1981</a>, busca conciliar o desenvolvimento econômico, a conservação dos recursos naturais e a melhoria da qualidade de vida da população.</p></div>
-<figure class="flowchart"><img src="assets/imagens/fluxograma.png" width="994" height="826" loading="lazy" alt="Fluxograma do ZSEE-MT: plataforma de informações territoriais; instrumento técnico e político de planejamento e gestão; base para o desenvolvimento sustentável; distribuidor espacial de atividades econômicas; guia para políticas públicas; instrumento participativo e democrático."><figcaption>Informações, planejamento e participação para o desenvolvimento de Mato Grosso.</figcaption></figure></div></section>
-<section class="section history" id="cronologia"><div class="container"><div class="history-header"><div><p class="eyebrow">Nossa trajetória</p><h2>Construção do Zoneamento ao longo do tempo</h2><p>Principais marcos institucionais, técnicos e legislativos da construção do Zoneamento Socioeconômico-Ecológico de Mato Grosso.</p></div></div><div class="carousel-shell"><button class="round-button" id="previous-year" type="button" aria-label="Ver marco anterior" aria-controls="timeline"><svg viewBox="0 0 24 24" aria-hidden="true" class=""><path d="m15 5-7 7 7 7"/></svg></button><div class="timeline" id="timeline" role="region" aria-label="Cronologia do ZSEE-MT" aria-describedby="timeline-help" tabindex="0"><article class="event">
-      
-      
-      <h3 class="year">1981</h3>
-      <div class="event-card">
-        <p>A <strong>Constituição do Estado de Mato Grosso</strong> estabelece, no art. 263, inciso XV, a obrigatoriedade da elaboração do zoneamento para o estado.</p>
+  <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a
+        class="brand"
+        href="https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&amp;draft=true"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="ZSEE-MT — início"
+      >
+        <img
+          src="assets/imagens/logo.png"
+          width="636"
+          height="103"
+          alt="ZSEE-MT — Zoneamento Socioeconômico-Ecológico de Mato Grosso"
+        >
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="main-nav"
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+
+      <nav class="nav" id="main-nav" aria-label="Menu principal">
+        <a
+          href="https://www.seplag.mt.gov.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >SEPLAG</a>
+
+        <a
+          href="https://iframe.leisestaduais.com.br/mt?origin=instituicao"
+          target="_blank"
+          rel="noopener noreferrer"
+        >LEGISLAÇÃO</a>
+
+        <a
+          href="https://www.seplag.mt.gov.br/atendimento"
+          target="_blank"
+          rel="noopener noreferrer"
+        >CONTATOS</a>
+
+        <a
+          href="https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&amp;page=Sobre&amp;views=Exibir-7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >SOBRE NÓS</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- Vídeo de capa e logo. -->
+    <section
+      class="hero"
+      id="inicio"
+      aria-label="Zoneamento Socioeconômico-Ecológico de Mato Grosso"
+    >
+      <video
+        class="hero-video"
+        data-mobile-src="assets/videos/capa-celular.mp4"
+        data-mobile-poster="assets/imagens/capa-celular.jpg"
+        data-src="assets/videos/capa.mp4"
+        poster="assets/imagens/capa.jpg"
+        muted
+        loop
+        playsinline
+        preload="none"
+        aria-hidden="true"
+        disablepictureinpicture
+      ></video>
+
+      <div class="container hero-inner">
+        <div class="hero-logo">
+          <img
+            src="assets/imagens/logo.png"
+            width="636"
+            height="103"
+            alt="ZSEE-MT — Zoneamento Socioeconômico-Ecológico de Mato Grosso"
+          >
+        </div>
       </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">1992</h3>
-      <div class="event-card">
-        <p>É sancionada a <a class="law" href="https://leisestaduais.com.br/mt/lei-ordinaria-n-5993-1992-mato-grosso-institui-a-politica-de-planejamento-e-ordenamento-territorial-do-estado-de-mato-grosso-e-da-outras-providencias" target="_blank" rel="noopener noreferrer">Lei Estadual nº 5.993</a>, que institui a “Política de Ordenamento Territorial do Estado de Mato Grosso”, baseada numa primeira versão do ZEE na escala 1:1.500.000, elaborada pela SEPLAN (atual SEPLAG).</p>
+    </section>
+
+    <!-- Acessos principais: links abrem em novas guias. -->
+    <nav class="access-band" aria-label="Acessos ao zoneamento">
+      <div class="container access-grid">
+        <a
+          class="access-card"
+          href="https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?draft=true&amp;id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&amp;page=Elabora%C3%A7%C3%A3o-do-ZSEE"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="9" y="2" width="6" height="6" rx="1"/>
+            <rect x="2" y="16" width="6" height="6" rx="1"/>
+            <rect x="16" y="16" width="6" height="6" rx="1"/>
+            <path d="M12 8v4M5 16v-4h14v4"/>
+          </svg>
+
+          <span>Elaboração do ZSEE</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="arrow">
+            <path d="m9 5 7 7-7 7"/>
+          </svg>
+        </a>
+
+        <a
+          class="access-card"
+          href="https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?draft=true&amp;id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&amp;page=Metodologia"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="2" width="12" height="18" rx="2"/>
+            <path d="M6 6h6M6 10h3"/>
+            <circle cx="15" cy="15" r="5"/>
+            <path d="m19 19 3 3"/>
+          </svg>
+
+          <span>Metodologia</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="arrow">
+            <path d="m9 5 7 7-7 7"/>
+          </svg>
+        </a>
+
+        <a
+          class="access-card"
+          href="https://geodados.mt.gov.br/portal/apps/experiencebuilder/experience/?draft=true&amp;id=e1c86d6bca2d4fd8ab92141e2c3c7e5a&amp;page=Cadernos-do-ZSEE-"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 5C8 2 4 2 2 3v17c3-1 7-1 10 2 3-3 7-3 10-2V3c-2-1-6-1-10 2Zm0 0v17"/>
+          </svg>
+
+          <span>Cadernos do ZSEE</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="arrow">
+            <path d="m9 5 7 7-7 7"/>
+          </svg>
+        </a>
+
+        <button
+          type="button"
+          class="access-card"
+          id="mapas-pendente"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+
+          <span>Mapas Dinâmicos</span>
+
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="arrow">
+            <path d="m9 5 7 7-7 7"/>
+          </svg>
+        </button>
       </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">1993</h3>
-      <div class="event-card">
-        <p>A SEPLAN realiza licitação internacional para elaboração do ZEE. A empresa de consultoria Consórcio Nacional de Engenheiros Consultores (CNEC) é contratada para os estudos.</p>
+    </nav>
+
+    <!-- Apresentação. -->
+    <section class="section" id="apresentacao">
+      <div class="container presentation-grid">
+        <div class="prose">
+          <p class="eyebrow">Território e sustentabilidade</p>
+          <h1>Apresentação</h1>
+
+          <p>
+            O Zoneamento Socioeconômico-Ecológico de
+            <a
+              href="https://intergeo.intermat.mt.gov.br/portal/apps/storymaps/stories/40b98299f78f4cb0a5e216b1f33e4337"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Mato Grosso</a>
+            (ZSEE-MT) constitui importante instrumento para orientar o uso
+            do território e promover um desenvolvimento mais equilibrado,
+            sustentável e baseado em critérios técnicos.
+          </p>
+
+          <p>
+            De caráter multitemático e transversal, integra informações
+            ambientais, sociais, econômicas e territoriais, proporcionando
+            uma visão sistêmica do Estado e oferecendo diretrizes para
+            subsidiar as decisões do poder público e dos agentes privados.
+          </p>
+
+          <p>
+            O ZSEE-MT é, portanto, um instrumento estratégico de planejamento
+            e ordenamento territorial, voltado à promoção do desenvolvimento
+            sustentável. Fundamentado no
+            <a
+              href="https://www.planalto.gov.br/ccivil_03/decreto/2002/d4297.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Decreto Federal nº 4.297, de 10 de julho de 2002</a>,
+            e alinhado aos princípios da Política Nacional do Meio Ambiente
+            (PNMA), instituída pela
+            <a
+              href="https://www.planalto.gov.br/ccivil_03/leis/l6938.htm"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Lei nº 6.938/1981</a>,
+            busca conciliar o desenvolvimento econômico, a conservação dos
+            recursos naturais e a melhoria da qualidade de vida da população.
+          </p>
+        </div>
+
+        <figure class="flowchart">
+          <img
+            src="assets/imagens/fluxograma.png"
+            width="994"
+            height="826"
+            loading="lazy"
+            alt="Fluxograma do ZSEE-MT: plataforma de informações territoriais; instrumento técnico e político de planejamento e gestão; base para o desenvolvimento sustentável; distribuidor espacial de atividades econômicas; guia para políticas públicas; instrumento participativo e democrático."
+          >
+
+          <figcaption>
+            Informações, planejamento e participação para o desenvolvimento
+            de Mato Grosso.
+          </figcaption>
+        </figure>
       </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">1994</h3>
-      <div class="event-card">
-        <p>É dado o início oficial dos trabalhos técnicos da licitação internacional.</p>
+    </section>
+
+    <!-- Cronologia. -->
+    <section class="section history" id="cronologia">
+      <div class="container">
+        <div class="history-header">
+          <div>
+            <p class="eyebrow">Nossa trajetória</p>
+            <h2>Construção do Zoneamento ao longo do tempo</h2>
+
+            <p>
+              Principais marcos institucionais, técnicos e legislativos
+              da construção do Zoneamento Socioeconômico-Ecológico de
+              Mato Grosso.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-shell">
+          <button
+            class="round-button"
+            id="previous-year"
+            type="button"
+            aria-label="Ver marco anterior"
+            aria-controls="timeline"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 5-7 7 7 7"/>
+            </svg>
+          </button>
+
+          <div
+            class="timeline"
+            id="timeline"
+            role="region"
+            aria-label="Cronologia do ZSEE-MT"
+            aria-describedby="timeline-help"
+            tabindex="0"
+          >
+            <article class="event">
+              <h3 class="year">1981</h3>
+              <div class="event-card">
+                <p>
+                  A <strong>Constituição do Estado de Mato Grosso</strong>
+                  estabelece, no art. 263, inciso XV, a obrigatoriedade
+                  da elaboração do zoneamento para o estado.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">1992</h3>
+              <div class="event-card">
+                <p>
+                  É sancionada a
+                  <a
+                    class="law"
+                    href="https://leisestaduais.com.br/mt/lei-ordinaria-n-5993-1992-mato-grosso-institui-a-politica-de-planejamento-e-ordenamento-territorial-do-estado-de-mato-grosso-e-da-outras-providencias"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Lei Estadual nº 5.993</a>,
+                  que institui a “Política de Ordenamento Territorial
+                  do Estado de Mato Grosso”, baseada numa primeira versão
+                  do ZEE na escala 1:1.500.000, elaborada pela SEPLAN
+                  (atual SEPLAG).
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">1993</h3>
+              <div class="event-card">
+                <p>
+                  A SEPLAN realiza licitação internacional para elaboração
+                  do ZEE. A empresa de consultoria Consórcio Nacional de
+                  Engenheiros Consultores (CNEC) é contratada para os estudos.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">1994</h3>
+              <div class="event-card">
+                <p>
+                  É dado o início oficial dos trabalhos técnicos
+                  da licitação internacional.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">1995</h3>
+              <div class="event-card">
+                <p>
+                  É sancionada a
+                  <a
+                    class="law"
+                    href="https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:1995-11-21;38/ficha-tecnica"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >Lei Complementar nº 38</a>,
+                  que institui o Código Ambiental de Mato Grosso,
+                  incluindo o zoneamento como instrumento da Política
+                  Estadual de Meio Ambiente.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2000</h3>
+              <div class="event-card">
+                <p>
+                  Ocorre a conclusão dos estudos técnicos do ZEE,
+                  iniciados em 1994.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2004</h3>
+              <div class="event-card">
+                <p>
+                  O Poder Executivo de MT envia à Assembleia Legislativa
+                  um projeto de lei sobre o zoneamento. Em 2005,
+                  o projeto é retirado para revisão.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2005–2007</h3>
+              <div class="event-card">
+                <p>
+                  A <strong>Embrapa Solos</strong> é contratada para revisar
+                  a proposta. Um seminário técnico é realizado com
+                  representantes da SEPLAN, SEMA, MMA e outras instituições.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2008</h3>
+              <div class="event-card">
+                <p>
+                  É criada a <strong>Comissão Estadual de Zoneamento
+                  Socioeconômico-Ecológico (CEZSEE/MT)</strong>
+                  pelo Decreto Estadual nº 1.139.
+                </p>
+                <p>
+                  O Governador Blairo Maggi envia à Assembleia Legislativa
+                  o Projeto de Lei nº 273/2008, instituindo a Política
+                  de Planejamento e Ordenamento Territorial do Estado.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2008–2009</h3>
+              <div class="event-card">
+                <p>
+                  A Assembleia Legislativa promove seminários técnicos
+                  e audiências públicas nas 12 regiões de planejamento
+                  do estado. Participam mais de 50 mil pessoas.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2009</h3>
+              <div class="event-card">
+                <p>
+                  É apresentado o substitutivo integral ao PL 273/2008
+                  pelo Deputado Alexandre César.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2010</h3>
+              <div class="event-card">
+                <p>
+                  Dois novos substitutivos integrais são apresentados
+                  por lideranças partidárias, com atualizações
+                  e ajustes à proposta anterior.
+                </p>
+                <p>
+                  É aprovado o terceiro substitutivo integral,
+                  com 17 emendas, em segunda votação
+                  pela Assembleia Legislativa.
+                </p>
+                <p>
+                  A redação final do projeto é aprovada
+                  e encaminhada ao Poder Executivo.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2011</h3>
+              <div class="event-card">
+                <p>
+                  É sancionada a <strong>Lei Estadual nº 9.523/2011</strong>,
+                  que institui oficialmente o ZSEE/MT.
+                </p>
+                <p>
+                  O Ministério Público de MT propõe a Ação Civil Pública
+                  nº 1067-82.2011.811.0082, questionando a legalidade
+                  da Lei nº 9.523/2011. Uma liminar suspende seus efeitos.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2012</h3>
+              <div class="event-card">
+                <p>
+                  Apesar da liminar, o Governo de MT submete o ZSEE/MT
+                  à Comissão Coordenadora do ZEE no Território Nacional
+                  (CCZEE) para avaliação.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2016</h3>
+              <div class="event-card">
+                <p>
+                  A decisão de mérito da ação civil, proferida pelo Juízo,
+                  suspende definitivamente os artigos da Lei nº 9.523/2011
+                  referentes ao ZSEE-MT.
+                </p>
+              </div>
+            </article>
+
+            <article class="event">
+              <h3 class="year">2017</h3>
+              <div class="event-card">
+                <p>
+                  É publicado o <strong>Decreto nº 883/2017</strong>,
+                  que institui a Comissão Estadual do ZSEE/MT (CEZSEE/MT),
+                  incluindo representantes do governo e da sociedade civil
+                  para acompanhar e avaliar o zoneamento.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <button
+            class="round-button"
+            id="next-year"
+            type="button"
+            aria-label="Ver próximo marco"
+            aria-controls="timeline"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9 5 7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+        <p class="sr-only" id="timeline-help">
+          Use as setas para explorar os anos.
+          No celular, deslize os cartões para os lados.
+        </p>
+
+        <p
+          class="sr-only"
+          id="timeline-status"
+          role="status"
+          aria-live="polite"
+        ></p>
       </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">1995</h3>
-      <div class="event-card">
-        <p>É sancionada a <a class="law" href="https://www.al.mt.gov.br/norma-juridica/urn:lex:br;mato.grosso:estadual:lei.complementar:1995-11-21;38/ficha-tecnica" target="_blank" rel="noopener noreferrer">Lei Complementar nº 38</a>, que institui o Código Ambiental de Mato Grosso, incluindo o zoneamento como instrumento da Política Estadual de Meio Ambiente.</p>
+    </section>
+
+    <!-- Estruturação. -->
+    <section class="section" id="estrutura">
+      <div class="container">
+        <p class="eyebrow">Instituições e participação</p>
+        <h2>Estruturação do ZSEE-MT</h2>
+
+        <div class="prose structure-intro">
+          <p>
+            O estudo do Zoneamento Socioeconômico-Ecológico de Mato Grosso
+            (ZSEE-MT) foi desenvolvido pela Universidade Federal de Viçosa
+            (UFV), sob a coordenação da Superintendência de Indicadores
+            Socioeconômicos e Ordenamento Territorial (SISOT) da SEPLAG-MT.
+          </p>
+
+          <p>
+            O processo contou com a participação de representantes do
+            poder público, através da Comissão Técnica de Conformidade
+            (CTC), e da sociedade civil, representada pela Comissão Estadual
+            de Zoneamento Socioeconômico-Ecológico (CEZSEE-MT), que acompanhou
+            o desenvolvimento dos trabalhos por intermédio de um Grupo de
+            Trabalho específico.
+          </p>
+
+          <p>
+            A seguir, apresentam-se a composição e as funções
+            dos grupos envolvidos:
+          </p>
+        </div>
+
+        <div class="groups">
+          <details>
+            <summary>Comissão Técnica de Conformidade (CTC)</summary>
+            <div class="group-content">
+              <div class="entity-grid" id="instituicoes-ctc"></div>
+            </div>
+          </details>
+
+          <details>
+            <summary>Comissão Estadual do ZSEE-MT (CEZSEE-MT)</summary>
+            <div class="group-content">
+              <div class="entity-grid" id="instituicoes-cezsee"></div>
+            </div>
+          </details>
+
+          <details>
+            <summary>Grupo de Trabalho (GT) da CEZSEE-MT</summary>
+            <div class="group-content">
+              <div class="entity-grid" id="instituicoes-gt"></div>
+            </div>
+          </details>
+        </div>
       </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2000</h3>
-      <div class="event-card">
-        <p>Ocorre a conclusão dos estudos técnicos do ZEE, iniciados em 1994.</p>
+    </section>
+
+    <!-- Perguntas frequentes, após Estruturação. -->
+    <section
+      class="section faq"
+      id="perguntas-frequentes"
+      aria-labelledby="faq-title"
+    >
+      <div class="container">
+        <p class="eyebrow">Tire suas dúvidas</p>
+        <h2 id="faq-title">Perguntas frequentes</h2>
+
+        <div class="faq-list">
+          <details>
+            <summary>
+              O que é o Zoneamento Socioeconômico-Ecológico
+              de Mato Grosso (ZSEE-MT)?
+            </summary>
+            <div class="faq-answer">
+              <p>Resposta em elaboração.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Qual é o objetivo do ZSEE-MT?</summary>
+            <div class="faq-answer">
+              <p>Resposta em elaboração.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              Houve contratação para ajudar na construção do ZSEE-MT?
+            </summary>
+            <div class="faq-answer">
+              <p>Resposta em elaboração.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              Quais regulamentações normatizam o ZSEE-MT?
+            </summary>
+            <div class="faq-answer">
+              <p>Resposta em elaboração.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              Como as zonas foram definidas e quais são elas?
+            </summary>
+            <div class="faq-answer">
+              <p>Resposta em elaboração.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>
+              As zonas definem quais atividades podem
+              ou não ser desenvolvidas nelas?
+            </summary>
+            <div class="faq-answer">
+              <p>Resposta em elaboração.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>O ZSEE-MT precisa ser atualizado?</summary>
+            <div class="faq-answer">
+              <p>Resposta em elaboração.</p>
+            </div>
+          </details>
+        </div>
       </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2004</h3>
-      <div class="event-card">
-        <p>O Poder Executivo de MT envia à Assembleia Legislativa um projeto de lei sobre o zoneamento. Em 2005, o projeto é retirado para revisão.</p>
-      </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2005–2007</h3>
-      <div class="event-card">
-        <p>A <strong>Embrapa Solos</strong> é contratada para revisar a proposta. Um seminário técnico é realizado com representantes da SEPLAN, SEMA, MMA e outras instituições.</p>
-      </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2008</h3>
-      <div class="event-card">
-        <p>É criada a <strong>Comissão Estadual de Zoneamento Socioeconômico-Ecológico (CEZSEE/MT)</strong> pelo Decreto Estadual nº 1.139.</p>
-        <p>O Governador Blairo Maggi envia à Assembleia Legislativa o Projeto de Lei nº 273/2008, instituindo a Política de Planejamento e Ordenamento Territorial do Estado.</p>
-      </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2008–2009</h3>
-      <div class="event-card">
-        <p>A Assembleia Legislativa promove seminários técnicos e audiências públicas nas 12 regiões de planejamento do estado. Participam mais de 50 mil pessoas.</p>
-      </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2009</h3>
-      <div class="event-card">
-        <p>É apresentado o substitutivo integral ao PL 273/2008 pelo Deputado Alexandre César.</p>
-      </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2010</h3>
-      <div class="event-card">
-        <p>Dois novos substitutivos integrais são apresentados por lideranças partidárias, com atualizações e ajustes à proposta anterior.</p>
-        <p>É aprovado o terceiro substitutivo integral, com 17 emendas, em segunda votação pela Assembleia Legislativa.</p>
-        <p>A redação final do projeto é aprovada e encaminhada ao Poder Executivo.</p>
-      </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2011</h3>
-      <div class="event-card">
-        <p>É sancionada a <strong>Lei Estadual nº 9.523/2011</strong>, que institui oficialmente o ZSEE/MT.</p>
-        <p>O Ministério Público de MT propõe a Ação Civil Pública nº 1067-82.2011.811.0082, questionando a legalidade da Lei nº 9.523/2011. Uma liminar suspende seus efeitos.</p>
-      </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2012</h3>
-      <div class="event-card">
-        <p>Apesar da liminar, o Governo de MT submete o ZSEE/MT à Comissão Coordenadora do ZEE no Território Nacional (CCZEE) para avaliação.</p>
-      </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2016</h3>
-      <div class="event-card">
-        <p>A decisão de mérito da ação civil, proferida pelo Juízo, suspende definitivamente os artigos da Lei nº 9.523/2011 referentes ao ZSEE-MT.</p>
-      </div>
-    </article><article class="event">
-      
-      
-      <h3 class="year">2017</h3>
-      <div class="event-card">
-        <p>É publicado o <strong>Decreto nº 883/2017</strong>, que institui a Comissão Estadual do ZSEE/MT (CEZSEE/MT), incluindo representantes do governo e da sociedade civil para acompanhar e avaliar o zoneamento.</p>
-      </div>
-    </article></div><button class="round-button" id="next-year" type="button" aria-label="Ver próximo marco" aria-controls="timeline"><svg viewBox="0 0 24 24" aria-hidden="true" class=""><path d="m9 5 7 7-7 7"/></svg></button></div><p class="sr-only" id="timeline-help">Use as setas para explorar os anos. No celular, deslize os cartões para os lados.</p><p class="sr-only" id="timeline-status" role="status" aria-live="polite"></p></div></section>
-<section class="section" id="estrutura"><div class="container"><p class="eyebrow">Instituições e participação</p><h2>Estruturação do ZSEE-MT</h2><div class="prose structure-intro"><p>O estudo do Zoneamento Socioeconômico-Ecológico de Mato Grosso (ZSEE-MT) foi desenvolvido pela Universidade Federal de Viçosa (UFV), sob a coordenação da Superintendência de Indicadores Socioeconômicos e Ordenamento Territorial (SISOT) da SEPLAG-MT.</p><p>O processo contou com a participação de representantes do poder público, através da Comissão Técnica de Conformidade (CTC), e da sociedade civil, representada pela Comissão Estadual de Zoneamento Socioeconômico-Ecológico (CEZSEE-MT), que acompanhou o desenvolvimento dos trabalhos por intermédio de um Grupo de Trabalho específico.</p><p>A seguir, apresentam-se a composição e as funções dos grupos envolvidos:</p></div><div class="groups"><details><summary>Comissão Técnica de Conformidade (CTC)</summary><div class="group-content">
-            <div class="entity-grid">
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEPLAG" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEPLAG</h3>
-                <p>Secretaria de Estado de Planejamento e Gestão</p>
-            </div>
-        </article>
+    </section>
+  </main>
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEMA" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEMA</h3>
-                <p>Secretaria de Estado do Meio Ambiente</p>
-            </div>
-        </article>
+  <!-- Rodapé sem a imagem da SEPLAG. -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>
+        <strong>
+          SEPLAG - Secretaria de Estado de Planejamento e Gestão -
+          Todos os direitos reservados.
+        </strong>
+        <br>
+        Rua C, Bloco III, CPA • Cuiabá-MT • 78049-005 •
+        Tel: (65) 3613-3271
+      </p>
+    </div>
+  </footer>
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEDEC" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEDEC</h3>
-                <p>Secretaria de Estado de Desenvolvimento Econômico</p>
-            </div>
-        </article>
+  <dialog id="pending-link" aria-labelledby="pending-title">
+    <h2 id="pending-title">Mapas Dinâmicos</h2>
+    <p>O endereço desta página será disponibilizado em breve.</p>
+    <button type="button" class="dialog-close">Fechar</button>
+  </dialog>
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de INTERMAT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>INTERMAT</h3>
-                <p>Instituto de Terras de Mato Grosso</p>
-            </div>
-        </article>
+  <!--
+    O JavaScript desta página está incluído abaixo.
+    Não adicione site.js ou navegacao.js neste HTML,
+    pois versões anteriores podem alterar os links.
+  -->
+  <script>
+    /* Menu para celular. */
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.nav');
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/unemat.png" alt="Logotipo de UNEMAT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>UNEMAT</h3>
-                <p>Universidade Estadual de Mato Grosso</p>
-            </div>
-        </article>
+    function closeMenu() {
+      navigation.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menu');
+    }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de Escola de Governo do Estado de Mato Grosso" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>Escola de Governo do Estado de Mato Grosso</h3>
-                
-            </div>
-        </article>
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') !== 'true';
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEAF" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEAF</h3>
-                <p>Secretaria de Estado de Agricultura Familiar</p>
-            </div>
-        </article>
+      navigation.classList.toggle('open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute(
+        'aria-label',
+        open ? 'Fechar menu' : 'Abrir menu'
+      );
+    });
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEFAZ" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEFAZ</h3>
-                <p>Secretaria de Estado de Fazenda</p>
-            </div>
-        </article></div>
-        </div></details><details><summary>Comissão Estadual do ZSEE-MT (CEZSEE-MT)</summary><div class="group-content">
-            <div class="entity-grid">
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEPLAG" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEPLAG</h3>
-                <p>Secretaria de Estado de Planejamento e Gestão</p>
-            </div>
-        </article>
+    document.addEventListener('keydown', event => {
+      if (
+        event.key === 'Escape' &&
+        menuButton.getAttribute('aria-expanded') === 'true'
+      ) {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEMA" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEMA</h3>
-                <p>Secretaria de Estado do Meio Ambiente</p>
-            </div>
-        </article>
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.header')) {
+        closeMenu();
+      }
+    });
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEDEC" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEDEC</h3>
-                <p>Secretaria de Estado de Desenvolvimento Econômico</p>
-            </div>
-        </article>
+    navigation.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        closeMenu();
+      }
+    });
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de INTERMAT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>INTERMAT</h3>
-                <p>Instituto de Terras de Mato Grosso</p>
-            </div>
-        </article>
+    matchMedia('(min-width:761px)').addEventListener('change', closeMenu);
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SES" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SES</h3>
-                <p>Secretaria de Estado de Saúde</p>
-            </div>
-        </article>
+    /* Aviso para Mapas Dinâmicos, ainda sem endereço. */
+    const dialog = document.querySelector('#pending-link');
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SESP" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SESP</h3>
-                <p>Secretaria de Estado de Segurança</p>
-            </div>
-        </article>
+    document.querySelector('#mapas-pendente').addEventListener('click', () => {
+      dialog.showModal();
+    });
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/ufmt.jpg" alt="Logotipo de UFMT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>UFMT</h3>
-                <p>Universidade Federal de Mato Grosso</p>
-            </div>
-        </article>
+    document.querySelector('.dialog-close').addEventListener('click', () => {
+      dialog.close();
+    });
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/fepoimt.jpg" alt="Logotipo de FEPOIMT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>FEPOIMT</h3>
-                <p>Federação dos Povos e Organizações Indígenas de MT</p>
-            </div>
-        </article>
+    /* Instituições: mesmos nomes, imagens e grupos do código enviado. */
+    const instituicoes = {
+      seplag: [
+        'SEPLAG',
+        'Secretaria de Estado de Planejamento e Gestão',
+        'logo-estado.jpg'
+      ],
+      sema: [
+        'SEMA',
+        'Secretaria de Estado do Meio Ambiente',
+        'logo-estado.jpg'
+      ],
+      sedec: [
+        'SEDEC',
+        'Secretaria de Estado de Desenvolvimento Econômico',
+        'logo-estado.jpg'
+      ],
+      intermat: [
+        'INTERMAT',
+        'Instituto de Terras de Mato Grosso',
+        'logo-estado.jpg'
+      ],
+      unemat: [
+        'UNEMAT',
+        'Universidade Estadual de Mato Grosso',
+        'unemat.png'
+      ],
+      escola: [
+        'Escola de Governo do Estado de Mato Grosso',
+        '',
+        'logo-estado.jpg'
+      ],
+      seaf: [
+        'SEAF',
+        'Secretaria de Estado de Agricultura Familiar',
+        'logo-estado.jpg'
+      ],
+      sefaz: [
+        'SEFAZ',
+        'Secretaria de Estado de Fazenda',
+        'logo-estado.jpg'
+      ],
+      ses: [
+        'SES',
+        'Secretaria de Estado de Saúde',
+        'logo-estado.jpg'
+      ],
+      sesp: [
+        'SESP',
+        'Secretaria de Estado de Segurança',
+        'logo-estado.jpg'
+      ],
+      ufmt: [
+        'UFMT',
+        'Universidade Federal de Mato Grosso',
+        'ufmt.jpg'
+      ],
+      fepoimt: [
+        'FEPOIMT',
+        'Federação dos Povos e Organizações Indígenas de MT',
+        'fepoimt.jpg'
+      ],
+      irikixi: [
+        'Associação Indígena Irikixi Pitukwa',
+        '',
+        ''
+      ],
+      omicrikanas: [
+        'Comunidade Indígena Omicrikanas',
+        '',
+        ''
+      ],
+      isa: [
+        'ISA',
+        'Instituto Socioambiental',
+        'isa.png'
+      ],
+      icv: [
+        'ICV',
+        'Instituto Centro de Vida',
+        'icv.jpg'
+      ],
+      opan: [
+        'OPAN',
+        'Operação Amazônia Nativa',
+        'opan.jpg'
+      ],
+      cipem: [
+        'CIPEM',
+        'Centro das Indústrias Produtoras e Exportadoras de Madeira de MT',
+        'cipem.png'
+      ],
+      imea: [
+        'IMEA',
+        'Instituto Mato-Grossense de Economia Agropecuária',
+        'imea.png'
+      ],
+      funai: [
+        'FUNAI',
+        'Fundação Nacional dos Povos Indígenas',
+        'funai.png'
+      ],
+      sinfra: [
+        'SINFRA',
+        'Secretaria de Estado de Infraestrutura',
+        'logo-estado.jpg'
+      ],
+      casacivil: [
+        'Casa Civil',
+        '',
+        'logo-estado.jpg'
+      ],
+      fiemt: [
+        'FIEMT',
+        'Federação das Indústrias no Estado de Mato Grosso',
+        'fiemt.png'
+      ],
+      fetagri: [
+        'FETAGRI',
+        'Federação dos Trabalhadores na Agricultura de MT',
+        'fetagri.jpg'
+      ],
+      feevida: [
+        'Associação Fé e Vida',
+        'Representante das Comunidades',
+        'fe-e-vida.jpeg'
+      ],
+      xaraies: [
+        'ASSOCIAÇÃO XARAIÉS',
+        '',
+        'xaraies.jpg'
+      ],
+      famato: [
+        'FAMATO',
+        'Federação de Agricultura e Pecuária de Mato Grosso',
+        'famato.png'
+      ],
+      amm: [
+        'AMM',
+        'Associação Mato-grossense dos Municípios',
+        'amm.jpg'
+      ],
+      cta: [
+        'CTA',
+        'Centro de Tecnologia Alternativa',
+        'cta.jpg'
+      ],
+      gaia: [
+        'INSTITUTO GAIA',
+        '',
+        'instituto-gaia.webp'
+      ],
+      icmbio: [
+        'ICMBIO',
+        'Instituto Chico Mendes',
+        'icmbio.png'
+      ],
+      incra: [
+        'INCRA',
+        'Instituto Nacional de Colonização e Reforma Agrária',
+        'incra.jpg'
+      ]
+    };
 
-        <article class="entity-card">
-            <div class="logo-wrap"><div class="no-logo" aria-hidden="true"></div></div>
-            <div class="entity-info">
-                <h3>Associação Indígena Irikixi Pitukwa</h3>
-                
-            </div>
-        </article>
+    const grupos = {
+      'instituicoes-ctc': [
+        'seplag', 'sema', 'sedec', 'intermat',
+        'unemat', 'escola', 'seaf', 'sefaz'
+      ],
+      'instituicoes-cezsee': [
+        'seplag', 'sema', 'sedec', 'intermat', 'ses', 'sesp',
+        'ufmt', 'fepoimt', 'irikixi', 'omicrikanas', 'isa',
+        'icv', 'opan', 'cipem', 'imea', 'funai', 'unemat',
+        'sinfra', 'seaf', 'casacivil', 'fiemt', 'fetagri',
+        'feevida', 'xaraies', 'famato', 'amm', 'cta',
+        'gaia', 'icmbio', 'incra'
+      ],
+      'instituicoes-gt': [
+        'seplag', 'seaf', 'ufmt', 'fepoimt', 'isa',
+        'icv', 'unemat', 'fiemt', 'feevida', 'famato', 'amm'
+      ]
+    };
 
-        <article class="entity-card">
-            <div class="logo-wrap"><div class="no-logo" aria-hidden="true"></div></div>
-            <div class="entity-info">
-                <h3>Comunidade Indígena Omicrikanas</h3>
-                
-            </div>
-        </article>
+    function criarCartaoInstituicao(chave) {
+      const [nome, descricao, arquivo] = instituicoes[chave];
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/isa.png" alt="Logotipo de ISA" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>ISA</h3>
-                <p>Instituto Socioambiental</p>
-            </div>
-        </article>
+      const article = document.createElement('article');
+      article.className = 'entity-card';
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/icv.jpg" alt="Logotipo de ICV" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>ICV</h3>
-                <p>Instituto Centro de Vida</p>
-            </div>
-        </article>
+      const logoWrap = document.createElement('div');
+      logoWrap.className = 'logo-wrap';
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/opan.jpg" alt="Logotipo de OPAN" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>OPAN</h3>
-                <p>Operação Amazônia Nativa</p>
-            </div>
-        </article>
+      if (arquivo) {
+        const imagem = document.createElement('img');
+        imagem.src = 'assets/imagens/instituicoes/' + arquivo;
+        imagem.alt = 'Logotipo de ' + nome;
+        imagem.loading = 'lazy';
+        logoWrap.appendChild(imagem);
+      } else {
+        const espaco = document.createElement('div');
+        espaco.className = 'no-logo';
+        espaco.setAttribute('aria-hidden', 'true');
+        logoWrap.appendChild(espaco);
+      }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/cipem.png" alt="Logotipo de CIPEM" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>CIPEM</h3>
-                <p>Centro das Indústrias Produtoras e Exportadoras de Madeira de MT</p>
-            </div>
-        </article>
+      const info = document.createElement('div');
+      info.className = 'entity-info';
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/imea.png" alt="Logotipo de IMEA" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>IMEA</h3>
-                <p>Instituto Mato-Grossense de Economia Agropecuária</p>
-            </div>
-        </article>
+      const titulo = document.createElement('h3');
+      titulo.textContent = nome;
+      info.appendChild(titulo);
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/funai.png" alt="Logotipo de FUNAI" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>FUNAI</h3>
-                <p>Fundação Nacional dos Povos Indígenas</p>
-            </div>
-        </article>
+      if (descricao) {
+        const texto = document.createElement('p');
+        texto.textContent = descricao;
+        info.appendChild(texto);
+      }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/unemat.png" alt="Logotipo de UNEMAT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>UNEMAT</h3>
-                <p>Universidade Estadual de Mato Grosso</p>
-            </div>
-        </article>
+      article.append(logoWrap, info);
+      return article;
+    }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SINFRA" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SINFRA</h3>
-                <p>Secretaria de Estado de Infraestrutura</p>
-            </div>
-        </article>
+    Object.entries(grupos).forEach(([id, membros]) => {
+      const container = document.getElementById(id);
+      membros.forEach(chave => {
+        container.appendChild(criarCartaoInstituicao(chave));
+      });
+    });
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEAF" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEAF</h3>
-                <p>Secretaria de Estado de Agricultura Familiar</p>
-            </div>
-        </article>
+    /* Cronologia horizontal. */
+    const timeline = document.querySelector('.timeline');
+    const events = [...timeline.querySelectorAll('.event')];
+    const previous = document.querySelector('#previous-year');
+    const next = document.querySelector('#next-year');
+    const timelineStatus = document.querySelector('#timeline-status');
+    const reduced = matchMedia('(prefers-reduced-motion:reduce)');
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SETASC" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SETASC</h3>
-                <p>Secretaria de Estado de Assistência Social e Cidadania</p>
-            </div>
-        </article>
+    function step() {
+      if (events.length > 1) {
+        return events[1].offsetLeft - events[0].offsetLeft;
+      }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEDUC" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEDUC</h3>
-                <p>Secretaria de Estado de Educação</p>
-            </div>
-        </article>
+      return timeline.clientWidth;
+    }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de Casa Civil" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>Casa Civil</h3>
-                
-            </div>
-        </article>
+    function updateTimeline() {
+      const end = timeline.scrollWidth - timeline.clientWidth;
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/fiemt.png" alt="Logotipo de FIEMT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>FIEMT</h3>
-                <p>Federação das Indústrias no Estado de Mato Grosso</p>
-            </div>
-        </article>
+      previous.disabled = timeline.scrollLeft <= 2;
+      next.disabled = timeline.scrollLeft >= end - 2;
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/fetagri.jpg" alt="Logotipo de FETAGRI" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>FETAGRI</h3>
-                <p>Federação dos Trabalhadores na Agricultura de MT</p>
-            </div>
-        </article>
+      if (!events.length) {
+        return;
+      }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/fe-e-vida.jpeg" alt="Logotipo de Associação Fé e Vida" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>Associação Fé e Vida</h3>
-                <p>Representante das Comunidades</p>
-            </div>
-        </article>
+      const distancia = step();
+      const index = distancia > 0
+        ? Math.max(
+            0,
+            Math.min(
+              events.length - 1,
+              Math.round(timeline.scrollLeft / distancia)
+            )
+          )
+        : 0;
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/xaraies.jpg" alt="Logotipo de ASSOCIAÇÃO XARAIÉS" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>ASSOCIAÇÃO XARAIÉS</h3>
-                
-            </div>
-        </article>
+      const ano = events[index].querySelector('.year').textContent;
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/famato.png" alt="Logotipo de FAMATO" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>FAMATO</h3>
-                <p>Federação de Agricultura e Pecuária de Mato Grosso</p>
-            </div>
-        </article>
+      timelineStatus.textContent =
+        `Ano em destaque: ${ano}. ` +
+        `${index + 1} de ${events.length} marcos históricos.`;
+    }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/amm.jpg" alt="Logotipo de AMM" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>AMM</h3>
-                <p>Associação Mato-grossense dos Municípios</p>
-            </div>
-        </article>
+    function move(direction) {
+      timeline.scrollBy({
+        left: direction * step(),
+        behavior: reduced.matches ? 'instant' : 'smooth'
+      });
+    }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/cta.jpg" alt="Logotipo de CTA" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>CTA</h3>
-                <p>Centro de Tecnologia Alternativa</p>
-            </div>
-        </article>
+    previous.addEventListener('click', () => move(-1));
+    next.addEventListener('click', () => move(1));
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/instituto-gaia.webp" alt="Logotipo de INSTITUTO GAIA" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>INSTITUTO GAIA</h3>
-                
-            </div>
-        </article>
+    timeline.addEventListener('scroll', updateTimeline, {
+      passive: true
+    });
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/icmbio.png" alt="Logotipo de ICMBIO" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>ICMBIO</h3>
-                <p>Instituto Chico Mendes</p>
-            </div>
-        </article>
+    new ResizeObserver(updateTimeline).observe(timeline);
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/incra.jpg" alt="Logotipo de INCRA" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>INCRA</h3>
-                <p>Instituto Nacional de Colonização e Reforma Agrária</p>
-            </div>
-        </article></div>
-        </div></details><details><summary>Grupo de Trabalho (GT) da CEZSEE-MT</summary><div class="group-content">
-            <div class="entity-grid">
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEPLAG" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEPLAG</h3>
-                <p>Secretaria de Estado de Planejamento e Gestão</p>
-            </div>
-        </article>
+    timeline.addEventListener('keydown', event => {
+      if (event.target !== timeline) {
+        return;
+      }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/logo-estado.jpg" alt="Logotipo de SEAF" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>SEAF</h3>
-                <p>Secretaria de Estado de Agricultura Familiar</p>
-            </div>
-        </article>
+      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+        event.preventDefault();
+        move(event.key === 'ArrowRight' ? 1 : -1);
+      }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/ufmt.jpg" alt="Logotipo de UFMT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>UFMT</h3>
-                <p>Universidade Federal de Mato Grosso</p>
-            </div>
-        </article>
+      if (event.key === 'Home' || event.key === 'End') {
+        event.preventDefault();
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/fepoimt.jpg" alt="Logotipo de FEPOIMT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>FEPOIMT</h3>
-                <p>Federação dos Povos e Organizações Indígenas de MT</p>
-            </div>
-        </article>
+        timeline.scrollTo({
+          left: event.key === 'Home' ? 0 : timeline.scrollWidth,
+          behavior: reduced.matches ? 'instant' : 'smooth'
+        });
+      }
+    });
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/isa.png" alt="Logotipo de ISA" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>ISA</h3>
-                <p>Instituto Socioambiental</p>
-            </div>
-        </article>
+    updateTimeline();
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/icv.jpg" alt="Logotipo de ICV" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>ICV</h3>
-                <p>Instituto Centro de Vida</p>
-            </div>
-        </article>
+    /* Vídeo: versão de computador e versão de celular. */
+    const video = document.querySelector('.hero-video');
+    const hero = document.querySelector('.hero');
+    const mobileScreen = matchMedia('(max-width:760px)');
+    const desktopPoster = video.getAttribute('poster');
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/unemat.png" alt="Logotipo de UNEMAT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>UNEMAT</h3>
-                <p>Universidade Estadual de Mato Grosso</p>
-            </div>
-        </article>
+    let activeSource = '';
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/fiemt.png" alt="Logotipo de FIEMT" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>FIEMT</h3>
-                <p>Federação das Indústrias no Estado de Mato Grosso</p>
-            </div>
-        </article>
+    function loadVideo() {
+      const mobile = mobileScreen.matches;
+      const poster = mobile
+        ? video.dataset.mobilePoster
+        : desktopPoster;
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/fe-e-vida.jpeg" alt="Logotipo de Associação Fé e Vida" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>Associação Fé e Vida</h3>
-                <p>Representante das Comunidades</p>
-            </div>
-        </article>
+      video.poster = poster;
+      hero.style.backgroundImage = 'url("' + poster + '")';
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/famato.png" alt="Logotipo de FAMATO" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>FAMATO</h3>
-                <p>Federação de Agricultura e Pecuária de Mato Grosso</p>
-            </div>
-        </article>
+      if (reduced.matches) {
+        video.pause();
+        return;
+      }
 
-        <article class="entity-card">
-            <div class="logo-wrap"><img src="assets/imagens/instituicoes/amm.jpg" alt="Logotipo de AMM" loading="lazy"></div>
-            <div class="entity-info">
-                <h3>AMM</h3>
-                <p>Associação Mato-grossense dos Municípios</p>
-            </div>
-        </article></div>
-        </div></details></div></div></section>
-</main><footer class="footer"><div class="container footer-inner"><img class="footer-logo" src="assets/imagens/seplag-rodape.png" alt="SEPLAG — Secretaria de Estado de Planejamento e Gestão — Governo de Mato Grosso" loading="lazy"><p><strong>SEPLAG - Secretaria de Estado de Planejamento e Gestão - Todos os direitos reservados.</strong><br>Rua C, Bloco III, CPA • Cuiabá-MT • 78049-005 • Tel: (65) 3613-3271</p></div></footer>
-<dialog id="pending-link" aria-labelledby="pending-title"><h2 id="pending-title">Página</h2><p>O endereço desta página será disponibilizado em breve.</p><button type="button" class="dialog-close">Fechar</button></dialog>
-<script>
-  const script = document.createElement('script');
-  script.src = 'assets/js/site.js?v=' + Date.now();
-  document.body.appendChild(script);
-</script></body></html>
+      const source = mobile
+        ? video.dataset.mobileSrc
+        : video.dataset.src;
+
+      if (source !== activeSource) {
+        video.pause();
+        video.muted = true;
+        video.src = source;
+        activeSource = source;
+        video.load();
+      }
+
+      video.play().catch(() => {
+        /* Mantém a imagem de capa se o navegador bloquear o autoplay. */
+      });
+    }
+
+    mobileScreen.addEventListener('change', loadVideo);
+    reduced.addEventListener('change', loadVideo);
+
+    loadVideo();
+  </script>
+</body>
+</html>
